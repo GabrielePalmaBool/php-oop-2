@@ -1,7 +1,5 @@
 <?php
 
-require_once __DIR__ ."/product.php";
-
 class food extends Product {
     private $company_name;
     private $comapny_address;
