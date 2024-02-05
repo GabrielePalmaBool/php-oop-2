@@ -1,6 +1,6 @@
 <?php
 
-class Product{
+class product{
     private $title;
     private $img;
     private $price;

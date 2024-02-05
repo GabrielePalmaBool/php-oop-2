@@ -14,9 +14,12 @@ body {
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    padding: 30px;
     font-weight: bold;
+}
+
+li {
+    margin: 20px;
 }
 
 img {

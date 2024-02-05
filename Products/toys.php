@@ -1,8 +1,6 @@
 <?php
 
-require_once __DIR__ ."/product.php";
-
-class toys extends Product {
+class toys extends product {
     private $brand_name;
     private $target;
     private $material;

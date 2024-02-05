@@ -1,6 +1,6 @@
 <?php
 
-class food extends Product {
+class food extends product {
     private $company_name;
     private $comapny_address;
     private $target;
