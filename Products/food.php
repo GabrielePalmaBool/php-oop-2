@@ -1,9 +1,9 @@
 <?php
 
 class food extends product {
+    private $target;
     private $company_name;
     private $comapny_address;
-    private $target;
     private $expiration_date;
 
     //costruttore
