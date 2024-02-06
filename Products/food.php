@@ -20,16 +20,17 @@ class food extends product {
 
     //funzioni set
     public function setTarget($target) {
-        $this -> $target = $target;
+        $this ->target = $target;
     }
+
     public function setExdate($expiration_date) {
-        $this -> $expiration_date = $expiration_date;
+        $this -> expiration_date = $expiration_date;
     }
     public function setCompAdd($comapny_address) {
-        $this -> $comapny_address = $comapny_address;
+        $this -> comapny_address = $comapny_address;
     }
     public function setCompName($company_name) {
-        $this -> $company_name = $company_name;
+        $this -> company_name = $company_name;
     }
 
     //funzioni get 

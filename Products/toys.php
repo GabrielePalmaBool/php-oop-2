@@ -12,6 +12,7 @@ class toys extends product {
         $this -> setImg($img);
         $this -> setPrice($price);
         $this -> setBrand($brand_name);
+
         $this -> setTarget($target);
         $this -> setMaterial($material);
         $this -> setCompName($company_name);
@@ -19,16 +20,16 @@ class toys extends product {
 
      //funzioni set
      public function setTarget($target) {
-        $this -> $target = $target;
+        $this -> target = $target;
     }
     public function setBrand($brand_name) {
-        $this -> $brand_name = $brand_name;
+        $this -> brand_name = $brand_name;
     }
     public function setMaterial($material) {
-        $this -> $material = $material;
+        $this -> material = $material;
     }
     public function setCompName($company_name) {
-        $this -> $company_name = $company_name;
+        $this -> company_name = $company_name;
     }
 
     //funzioni get 
