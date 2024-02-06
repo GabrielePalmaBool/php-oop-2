@@ -25,7 +25,9 @@ class food extends product {
 
 
     public function setTarget($target) {
-        if(!is_string($target)) throw new Exception("Invalid target");
+        //controllo errori
+        if(!is_string($target)) throw new Exception("Invalid target class(food)");
+
         $this ->target = $target;
     }
     public function setExdate($expiration_date) {

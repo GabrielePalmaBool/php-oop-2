@@ -21,7 +21,9 @@
     <li>
     <?php 
         foreach ($prods as $prod){
+            if($prod ->getTitle() != null){
     ?>
+
         <h2>Titolo: <?php  echo $prod ->getTitle(); ?></h2>
         <img src="<?php echo $prod -> getImg()?>" alt="immagine prodotto">
         <h2> Prezzo: <?php echo $prod ->getPrice();?></h2>
@@ -40,6 +42,7 @@
        
 
     <?php 
+        }
         }
     }
     ?>

@@ -27,6 +27,10 @@ class toys extends product {
         $this -> brand_name = $brand_name;
     }
     public function setMaterial($material) {
+
+        //controllo errori
+        if(!is_string($material)) throw new Exception("Invalid price class(product)");
+
         $this -> material = $material;
     }
     public function setCompName($company_name) {
