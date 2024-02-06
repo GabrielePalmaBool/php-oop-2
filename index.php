@@ -17,37 +17,34 @@
 <body>
 
 <ul>
+    <?php 
+        foreach ($prods as $prod){
+    ?>
     <li>
-        
-        <h2>Titolo: <?php  echo $product ->getTitle(); ?></h2>
-        <img src="<?php echo $product -> getImg()?>" alt="immagine prodotto">
-        <h2> Prezzo: <?php echo $product ->getPrice();?></h2>
-
+        <h2>Titolo: <?php  echo $prod ->getTitle(); ?></h2>
+        <img src="<?php echo $prod -> getImg()?>" alt="immagine prodotto">
+        <h2> Prezzo: <?php echo $prod ->getPrice();?></h2>
+        <h2> Tipo di oggetto: <?php echo $prod ->getTypology();?></h2>
+        <h2> Per: <?php echo $prod ->getTarget();?></h2>
+        <?php if(method_exists($prod, 'getExDate')){?>
+        <h2> Data di scadenza: <?php echo $prod ->getExDate();?></h2>
+        <h2> Nome Azienda: <?php echo $prod ->getCompName();?></h2>
+        <h2> Sede Azienda: <?php echo $prod ->getCompAdd();?></h2>
+        <?php
+        } else{
+        ?>
+        <h2> Nome_brand: <?php echo $prod ->getBrand();?></h2>
+        <h2> Materiali: <?php echo $prod ->getMaterial();?></h2>
+        <h2> Nome Azienda: <?php echo $prod ->getCompName();?></h2>
+        <?php
+        }
+        ?>
     </li>
 
-    <li>
-        
-        <h2>Titolo: <?php  echo $food ->getTitle(); ?></h2>
-        <img src="<?php echo $food -> getImg()?>" alt="immagine prodotto">
-        <h2> Prezzo: <?php echo $food ->getPrice();?></h2>
-        <h2> Tipo di oggetto: <?php echo $food ->getType();?></h2>
-        <h2> Per: <?php echo $food ->getTarget();?></h2>
-        <h2> Data di scadenza: <?php echo $food ->getExDate();?></h2>
-        <h2> Nome Azienda: <?php echo $food ->getCompName();?></h2>
-        <h2> Sede Azienda: <?php echo $food ->getCompAdd();?></h2>
-    </li>
-
-    <li>
-        
-        <h2>Titolo: <?php  echo $toys ->getTitle(); ?></h2>
-        <img src="<?php echo $toys -> getImg()?>" alt="immagine prodotto">
-        <h2> Prezzo: <?php echo $toys ->getPrice();?></h2>
-        <h2> Tipo di oggetto: <?php echo $toys ->getType();?></h2>
-        <h2> Per: <?php echo $toys ->getTarget();?></h2>
-        <h2> Nome_brand: <?php echo $toys ->getBrand();?></h2>
-        <h2> Materiali: <?php echo $toys ->getMaterial();?></h2>
-        <h2> Nome Azienda: <?php echo $toys ->getCompName();?></h2>
-    </li>
+    <?php 
+        }
+    ?>
+    
 
 </ul>
 

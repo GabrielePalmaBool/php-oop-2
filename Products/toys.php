@@ -1,28 +1,25 @@
 <?php
 
 class toys extends product {
-    private $name;
+
+    private static $type= 'toys';
     private $brand_name;
     private $target;
     private $material;
     private $company_name;
 
-    public function __construct($title, $img, $price,$name, $brand_name, $target, $material,$company_name) {
+    public function __construct($title, $img, $price, $brand_name, $target, $material,$company_name) {
 
         $this -> setTitle($title);
         $this -> setImg($img);
         $this -> setPrice($price);
         $this -> setBrand($brand_name);
-        $this -> setType($name);
         $this -> setTarget($target);
         $this -> setMaterial($material);
         $this -> setCompName($company_name);
     }
 
      //funzioni set
-     public function setType($name) {
-        $this -> name = $name;
-    }
      public function setTarget($target) {
         $this -> target = $target;
     }
@@ -37,9 +34,7 @@ class toys extends product {
     }
 
     //funzioni get 
-    public function getType() {
-        return $this -> name;
-    }
+ 
     public function getTarget() {
         return $this -> target;
     }
@@ -52,7 +47,10 @@ class toys extends product {
     public function getCompName() {
         return $this -> company_name;
     }
-    
+    public function getTypology() {
 
+        return self :: $type;
+    }
+    
 }
 ?>
