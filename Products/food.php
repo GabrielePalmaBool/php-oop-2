@@ -1,17 +1,20 @@
 <?php
 
 class food extends product {
+
+    private $name;
     private $target;
     private $company_name;
     private $comapny_address;
     private $expiration_date;
 
     //costruttore
-    public function __construct($title, $img, $price, $target, $expiration_date, $comapny_address,$company_name) {
+    public function __construct($title, $img, $price, $name, $target, $expiration_date, $comapny_address,$company_name) {
 
         $this -> setTitle($title);
         $this -> setImg($img);
         $this -> setPrice($price);
+        $this -> setType($name);
         $this -> setTarget($target);
         $this -> setExdate($expiration_date);
         $this -> setCompAdd($comapny_address);
@@ -19,10 +22,14 @@ class food extends product {
     }
 
     //funzioni set
+
+    public function setType($name) {
+        $this -> name = $name;
+    }
+
     public function setTarget($target) {
         $this ->target = $target;
     }
-
     public function setExdate($expiration_date) {
         $this -> expiration_date = $expiration_date;
     }
@@ -34,6 +41,10 @@ class food extends product {
     }
 
     //funzioni get 
+
+    public function getType() {
+        return $this -> name;
+    }
     public function getTarget() {
         return $this -> target;
     }
