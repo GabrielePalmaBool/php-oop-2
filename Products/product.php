@@ -17,7 +17,7 @@ class product{
     public function setTitle($title) {
 
         //controllo sul dato titolo
-        if(!is_string($title) || strlen($title) < 3) return;
+        if(!is_string($title) || strlen($title) < 3) throw new Exception("Invalid Username");
         
         $this -> title = $title;
     }
@@ -26,6 +26,10 @@ class product{
     }
 
     public function setPrice($price) {
+
+        //controllo sul dato titolo
+        if(!is_string($price)  < 0) throw new Exception("Invalid price");
+
         $this -> price = $price;
     }
 

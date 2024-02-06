@@ -17,10 +17,11 @@
 <body>
 
 <ul>
+    
+    <li>
     <?php 
         foreach ($prods as $prod){
     ?>
-    <li>
         <h2>Titolo: <?php  echo $prod ->getTitle(); ?></h2>
         <img src="<?php echo $prod -> getImg()?>" alt="immagine prodotto">
         <h2> Prezzo: <?php echo $prod ->getPrice();?></h2>
@@ -36,15 +37,16 @@
         <h2> Nome_brand: <?php echo $prod ->getBrand();?></h2>
         <h2> Materiali: <?php echo $prod ->getMaterial();?></h2>
         <h2> Nome Azienda: <?php echo $prod ->getCompName();?></h2>
-        <?php
-        }
-        ?>
-    </li>
+       
 
     <?php 
         }
+    }
     ?>
     
+    </li>
+
+   
 
 </ul>
 
